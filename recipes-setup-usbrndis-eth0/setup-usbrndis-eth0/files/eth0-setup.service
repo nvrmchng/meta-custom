@@ -1,0 +1,13 @@
+[Unit]
+Description=set eth0 ip address and add default gw
+After=network.target getty.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=ifconfig eth0 192.168.8.2 netmask 255.255.255.0
+ExecStart=/sbin/route add default gw 192.168.8.3 eth0
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

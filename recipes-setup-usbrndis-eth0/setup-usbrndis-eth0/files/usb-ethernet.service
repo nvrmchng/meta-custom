@@ -1,0 +1,14 @@
+[Unit]
+Description=Start usb ethernet gadget
+Requires=dev-mmcblk0p2.device
+After=dev-mmcblk0p2.device
+Before=network.target getty.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/modprobe g_ether
+ExecStop=/sbin/rmmod g_ether
+
+[Install]
+WantedBy=basic.target

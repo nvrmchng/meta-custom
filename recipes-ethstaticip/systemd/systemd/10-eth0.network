@@ -1,0 +1,12 @@
+[Match]
+Name=eth0
+Type=ether
+
+[Link] 
+RequiredForOnline=yes
+
+[Network]
+DHCP=no 
+Address=192.168.8.2/24 
+Gateway=192.168.8.3
+DNS=8.8.8.8

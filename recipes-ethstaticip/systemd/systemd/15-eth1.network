@@ -1,0 +1,9 @@
+[Match]
+Name=eth1
+Type=ether
+
+[Link]
+RequiredForOnline=no
+
+[Network]
+DHCP=ipv4
